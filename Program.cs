@@ -52,6 +52,6 @@ if (checkManagers != managers.Count)
 PoliteData.Calculation(managers, period, pathSqlSample, pathOut);
 
 //  Examination
-//PoliteData.Check(pathOut);
+//PoliteData.Check(currentDirectory);
 
 

@@ -72,10 +72,10 @@ namespace CourtesyСheck
             return yearPast.Insert(startNext, month);
         }
 
-        public static void Check(string pathCheck)
+        public static void Check(string currentDirectory)
         {
-            var results = BigQuery.GetQueryResult<Check>(true, pathCheck);
-            ReaderWriterCsv.ReaderWriterCsv.SaveToCsv<Check>(results, $@"{pathCheck}\2023-09Check.csv", ';', false);
+            var results = BigQuery.GetQueryResult<Check>(true, currentDirectory + @"\queryCheck.txt");
+            //ReaderWriterCsv.ReaderWriterCsv.SaveToCsv<Check>(results, currentDirectory + @"\2023-09Check.csv", ';', false);
         }
     }
 }
